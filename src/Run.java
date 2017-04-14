@@ -5,7 +5,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Example {
+public class Run {
 
 	private JFrame renderedFrm;
 
@@ -13,7 +13,7 @@ public class Example {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Example window = new Example();
+					Run window = new Run();
 					window.renderedFrm.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -22,7 +22,7 @@ public class Example {
 		});
 	}
 
-	public Example() {
+	public Run() {
 		initialize();
 	}
 
