@@ -5,19 +5,19 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
-
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+
 class TakeBlackPointsFromImage extends JPanel {
-	
-	private static String image = Window.image;
+
+	private static String image;
 
 	private static final long serialVersionUID = 1L;
 	
 	private Color imgColor = Color.BLACK;
 	
-	private static int SHADE = 200;
+	private static int SHADE = 190;
 
 	public static BufferedImage readImage(String fileLocation) {
 		BufferedImage img = null;
@@ -31,14 +31,14 @@ class TakeBlackPointsFromImage extends JPanel {
 
 	public static int image() {
 
-		BufferedImage image1 = readImage("demo_input/"+image);
+		BufferedImage image1 = readImage(image);
 		int width = image1.getWidth();
 
 		return width;
 	}
 
 	public static int takeNumberOfDesiredPixels(){
-		BufferedImage image22 = readImage("demo_input/"+image);
+		BufferedImage image22 = readImage(image);
 		image22 = toBlackAndWhite(image22);
 		int numOfPix = 0; 
 		int width = image22.getWidth();
@@ -64,7 +64,7 @@ class TakeBlackPointsFromImage extends JPanel {
 	}
 	
 	public static int[] getXCoordinates() {
-		BufferedImage image22 = readImage("demo_input/"+image);
+		BufferedImage image22 = readImage(image);
 		image22 = toBlackAndWhite(image22);
 		int width = image22.getWidth();
 		int height = image22.getHeight();
@@ -116,7 +116,7 @@ class TakeBlackPointsFromImage extends JPanel {
 	}
 
 	public static int[] getYCoordinates() {
-		BufferedImage image22 = readImage("demo_input/"+image);
+		BufferedImage image22 = readImage(image);
 		image22 = toBlackAndWhite(image22);
 		int width = image22.getWidth();
 		int height = image22.getHeight();
@@ -165,6 +165,10 @@ class TakeBlackPointsFromImage extends JPanel {
 	
 	public void changeShade(int num){
 		SHADE = num;
+	}
+	
+	public void changeImg(String img){
+		image = img;
 	}
 	
 	//makes it gray scaled first
