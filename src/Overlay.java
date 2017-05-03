@@ -30,13 +30,11 @@ public class Overlay {
 		
 		for (int i = 0; i < imageHeight; i++) {
 			overlay1 = new Graph();
-			V = new Vertex[imageHeight][imageWidth];
 			for (int j = 0; j < imageWidth; j++) {
 				V[j][i] = new Vertex(j+","+i);
 				overlay1.addVertex(V[j][i]);
-				if (j>0){
-					overlay1.addEdge(V[j][i], V[j-1][i], 0);
-				}
+				overlay1.addEdge(V[j][i], V[j-1][i], 0);
+				
 			}
 			graphs[i] = overlay1;
 		}
