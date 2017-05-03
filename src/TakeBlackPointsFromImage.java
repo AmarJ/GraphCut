@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashSet;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
@@ -18,8 +19,9 @@ class TakeBlackPointsFromImage extends JPanel {
 	private Color imgColor = Color.BLACK;
 	
 	private static int SHADE = 190;
-
+	
 	public static BufferedImage readImage(String fileLocation) {
+		
 		BufferedImage img = null;
 		try {
 			img = ImageIO.read(new File(fileLocation));
@@ -59,7 +61,6 @@ class TakeBlackPointsFromImage extends JPanel {
 				}
 			}
 		}
-		
 		return numOfPix;
 	}
 	
@@ -73,7 +74,6 @@ class TakeBlackPointsFromImage extends JPanel {
 		
 		int d = -1;
 		
-		//I took this from stack overflow
 		for (int w = 0; w < width; w++) {
 			for (int h = 0; h < height; h++) {
 
@@ -124,7 +124,7 @@ class TakeBlackPointsFromImage extends JPanel {
 		int[] ArrayY = new int[takeNumberOfDesiredPixels()];
 
 		int d = -1;
-		//This is also stack overflow
+		//stack overflow helped here :)
 		for (int w = 0; w < width; w++) {
 			for (int h = 0; h < height; h++) {
 
@@ -171,7 +171,7 @@ class TakeBlackPointsFromImage extends JPanel {
 		image = img;
 	}
 	
-	//makes it gray scaled first
+	//converts to greyscale
 	private static BufferedImage toBlackAndWhite(BufferedImage image){ 
 		try {
 	         int width = image.getWidth();

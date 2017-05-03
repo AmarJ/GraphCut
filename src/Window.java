@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 
 public class Window {
 	
-	private static String imageLocation = "demo_input/img8.jpg";
+	private static String imageLocation = "demo_input/5x5.png";
 	
 	private static String image = "img8";
 	
@@ -32,9 +32,7 @@ public class Window {
 	}
 
 	public static void Window() {
-			
 		TakeBlackPointsFromImage example = new TakeBlackPointsFromImage();
-		
 		BufferedImage image1 = readImage(imageLocation);
 		//pick color of rendered drawing
 		example.changeColor(imgCol);
@@ -51,7 +49,7 @@ public class Window {
 		frame.setSize(width, height);
 	    frame.setBackground(bgCol);
 	    
-		//saves it as a png
+		//saves it as a png with transparent background
 		try {
 			BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 			Graphics2D g = image.createGraphics();
@@ -62,6 +60,10 @@ public class Window {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		//Graph overlay
+		Overlay graphs = new Overlay(imageLocation);
+		graphs.graphOver();
 	}
 
 	public static void init() {
