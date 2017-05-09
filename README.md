@@ -11,7 +11,6 @@ Download Kaptur_Runable.zip to try it out!
 
 ### Computer Vision
 
-Kaptur can digitizes hand drawn art, diagrams and signatures. Simply snap a picture of your creation and run it through Kaptur to convert your drawing into a digital image with a transparent background.
+Kaptur can be applied to the field of computer vision in order to extract valuable information from images. Kaptur can detect different objects in the pictures and also detect movement in a set of images. 
 
-Download Kaptur_Runable.zip to try it out!
-
+Still under development. 
