@@ -11,6 +11,6 @@ Download Kaptur_Runable.zip to try it out!
 
 ### Computer Vision
 
-Kaptur can be applied to the field of computer vision in order to extract valuable information from images. Kaptur can detect different objects in the pictures and also detect movement in a set of images. 
+Kaptur can be applied to the field of computer vision in order to extract valuable information from images. Kaptur detects different objects in pictures and can also detect movement in a set of images. 
 
 Still under development. 
