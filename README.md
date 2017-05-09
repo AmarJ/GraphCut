@@ -4,8 +4,14 @@ Kaptur is redefining image segmentation. At the heart of Kaptur lies a graph the
 
 ## Use case demo:
 
+### Digitize images
 Kaptur can digitizes hand drawn art, diagrams and signatures. Simply snap a picture of your creation and run it through Kaptur to convert your drawing into a digital image with a transparent background.
 
 Download Kaptur_Runable.zip to try it out!
 
+### Computer Vision
+
+Kaptur can digitizes hand drawn art, diagrams and signatures. Simply snap a picture of your creation and run it through Kaptur to convert your drawing into a digital image with a transparent background.
+
+Download Kaptur_Runable.zip to try it out!
 
