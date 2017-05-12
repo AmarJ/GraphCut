@@ -1,4 +1,4 @@
-![Alt text](logo12.PNG?raw=true "Kaptur_Logo")
+![Alt text](logo12.png?raw=true "Kaptur_Logo")
 
 Kaptur is redefining image segmentation. At the heart of Kaptur lies a graph theory model that overlays images with graphs segmenting foreground elements from the background.
 
