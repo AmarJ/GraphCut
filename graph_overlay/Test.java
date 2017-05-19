@@ -6,30 +6,39 @@ public class Test {
 		
 		Graph G = new Graph();
 		
-		Vertex[] V = new Vertex[4];
+		Vertex[][] V = new Vertex[3][5];
 	
-		V[0] = new Vertex("A");
-		V[1] = new Vertex("B");
-		V[2] = new Vertex("C");
-		V[3] = new Vertex("D"); 		
+		V[0][0] = new Vertex("A");
+		V[0][1] = new Vertex("B");
+		V[0][2] = new Vertex("C");
+		V[0][3] = new Vertex("D");
+		V[1][0] = new Vertex("E");
+		V[1][1] = new Vertex("F");
+		V[1][2] = new Vertex("G");
+		V[1][3] = new Vertex("H");
+		V[2][0] = new Vertex("I");
+		V[2][1] = new Vertex("J");
+		V[2][2] = new Vertex("K");
+		V[2][3] = new Vertex("L");
+		V[2][4] = new Vertex("M");
 
-		G.addVertex(V[0]);
-		G.addVertex(V[1]);
-		G.addVertex(V[2]);
-		G.addVertex(V[3]);
+		for (int i=0;i<3;i++){
+			for (int j=0;j<4;j++){
+				G.addVertex(V[i][j]);
+			}
+		}
 		
-		G.addEdge(V[0], V[1]);
-		G.addEdge(V[1], V[2]);
-		G.addEdge(V[2], V[3]);
-		G.addEdge(V[3], V[0]);
+		G.addEdge(V[0][0], V[0][1], 1);
+		G.addEdge(V[0][1], V[0][2], 1);
+		
 		
 		System.out.println("Graph 1: deg"+Arrays.toString(G.getDegreeSequence()));
 		System.out.println(G.getEdges());
-		System.out.println();
-		System.out.println();
+		System.out.println(G.containsVertex(V[0][0]));
+		System.out.println(G.containsVertex(V[2][4]));
 		
 		//Petersen graph 
-		
+		/*
 		Graph petersenG = new Graph();
 
 		V = new Vertex[10];
@@ -82,8 +91,9 @@ public class Test {
 		//Ver 8
 		petersenG.addEdge(V[8], V[9]);
 				
-		System.out.println("Petersen graph: deg"+Arrays.toString(petersenG.getDegreeSequence()));
-		System.out.println(petersenG.getEdges());
+		//System.out.println("Petersen graph: deg"+Arrays.toString(petersenG.getDegreeSequence()));
+		//System.out.println(petersenG.getEdges());
+		*/
 	}
 	
 	

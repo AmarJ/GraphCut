@@ -10,9 +10,9 @@ import javax.swing.JFrame;
 
 public class Window {
 	
-	private static String imageLocation = "demo_input/5x5.png";
+	private static String imageLocation = "demo_input/img1.png";
 	
-	private static String image = "img8";
+	private static String image = "img";
 	
 	private static int shade = 190;
 	
@@ -32,38 +32,32 @@ public class Window {
 	}
 
 	public static void Window() {
-		TakeBlackPointsFromImage example = new TakeBlackPointsFromImage();
+		
 		BufferedImage image1 = readImage(imageLocation);
-		//pick color of rendered drawing
-		example.changeColor(imgCol);
-		//shades of grey that it scans for 0(Black)->255(pure white)
-		example.changeShade(shade);
-		example.changeImg(imageLocation);
+		
+		Overlay overlay = new Overlay(imageLocation);
+		overlay.changeColor(imgCol);
 		int width = image1.getWidth() + 30;
 		int height = image1.getHeight() + 30;
-		
-		JFrame frame = new JFrame("ReDraw");
-		frame.getContentPane().add(example);
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
-		frame.setSize(width, height);
-	    frame.setBackground(bgCol);
-	    
+		overlay.changeShade(shade);
+		JFrame frame2 = new JFrame("GRAPH_Render");
+		frame2.getContentPane().add(overlay);
+		frame2.setLocationRelativeTo(null);
+		frame2.setVisible(true);
+		frame2.setSize(width, height);
+	    frame2.setBackground(bgCol);
 		//saves it as a png with transparent background
 		try {
 			BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 			Graphics2D g = image.createGraphics();
-			example.setSize(width, height);
-			layoutComponent(example);
-			example.print(g);
+			overlay.setSize(width, height);
+			layoutComponent(overlay);
+			overlay.print(g);
 			ImageIO.write(image,"PNG", new File(output));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
-		//Graph overlay
-		Overlay graphs = new Overlay(imageLocation);
-		graphs.graphOver();
 	}
 
 	public static void init() {

@@ -1,6 +1,4 @@
 import javax.swing.event.*;
-import javax.swing.JSlider;
-import javax.swing.JButton;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -39,6 +37,8 @@ public class Run {
 		renderedFrm = new JFrame();
 		renderedFrm.setTitle("Kaptur - Amar Jasarbasic");
 		renderedFrm.setBounds(0, 0, 400, 340);
+		ImageIcon img = new ImageIcon("Kaptur.png");
+		renderedFrm.setIconImage(img.getImage());
 		renderedFrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		renderedFrm.getContentPane().setLayout(null);
 		renderedFrm.setLocationRelativeTo(null);

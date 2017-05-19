@@ -31,13 +31,7 @@ class TakeBlackPointsFromImage extends JPanel {
 		return img;
 	}
 
-	public static int image() {
 
-		BufferedImage image1 = readImage(image);
-		int width = image1.getWidth();
-
-		return width;
-	}
 
 	public static int takeNumberOfDesiredPixels(){
 		BufferedImage image22 = readImage(image);

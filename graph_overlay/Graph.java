@@ -1,3 +1,4 @@
+//package graph_overlay;
 import java.util.*;
 
 public class Graph {
@@ -99,13 +100,14 @@ public class Graph {
     }
     
     
-    public int[] getDegreeSequence(){
-    	int[] degSeq = new int[this.vertices.size()];
+    public String[] getDegreeSequence(){
+    	String[] degSeq = new String[this.vertices.size()];
     	Iterator V = this.vertices.keySet().iterator();
     	int i=0;
     	
     	while (V.hasNext() && i<this.vertices.size()){
-    		degSeq[i] = this.vertices.get(V.next()).getNeighborCount();
+    		Object p = V.next();
+    		degSeq[i] = this.vertices.get(p).getNeighborCount()+" {"+this.vertices.get(p).toString()+"}";
     		i++;
     	}
     	
