@@ -2,6 +2,8 @@
 
 Kaptur is an image segmentation tool. At the heart of Kaptur lies a graph theory model that overlays images with graphs segmenting several layers of foreground elements from the background.
 
+[wwww.kapturtech.com]
+
 ## Use cases:
 
 ### Digitize images
