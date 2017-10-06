@@ -2,4 +2,4 @@
 
 Kaptur GraphCut is an image segmentation tool. At the heart of Kaptur GraphCut lies a graph theory model that overlays an image with a graph. The foreground is then segmented from the image using a graph cut algorithm based off Boykov-Kolmogorov algorithm from the [Graph Cuts and Efficient N-D Image Segmentation](http://www.csd.uwo.ca/~yuri/Papers/pami04.pdf) paper by researchers Dr. Boykov and Dr. Kolmogorov.
 
-I developed Kaptur GraphCut to use with my Kaptur logo detection tool. This extracts the foreground of an image which I then break down into smaller images and run them through my classifier to determine whether a logo is present. This is used instead of the conventional [sliding window approach](https://courses.engr.illinois.edu/cs543/sp2011/lectures/Lecture%2019%20-%20Sliding%20Window%20Detection%20-%20Vision_Spring2011.pdf). This way I am only running a handful of images through my CNN instead of the hundreds with the sliding window approach. 
+![Alt text](http://2.bp.blogspot.com/-o_Qr6t28Eew/UeA8TVZBEWI/AAAAAAAAAKY/eDeIFT4e1dU/s1600/graph.png)
